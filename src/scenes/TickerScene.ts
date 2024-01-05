@@ -21,6 +21,7 @@ export class TickerScene extends Container {
     this.addChild(this.clampy);
 
     Ticker.shared.add(this.update, this);
+    // Ticker.shared.add(this.update.bind(this)); same as this
   }
   private update(deltaTime: number): void {
     this.clampy.x = this.clampy.x + this.clampyVelocity * deltaTime;
